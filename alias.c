@@ -9,12 +9,11 @@
 _Static_assert(sizeof(EXE) <= MAX_PATH, "EXE length exceeds MAX_PATH");
 
 int mainCRTStartup(void) {
-    STARTUPINFOW si = {0};
-    si.cb = sizeof(si);
+    STARTUPINFOW si;
     PROCESS_INFORMATION pi;
 
     if (!CreateProcessW(EXE, CMD, 0, 0, 1, 0, 0, 0, &si, &pi)) {
-        return 1;
+        return -4;
     }
 
     unsigned long ret;
