@@ -1,5 +1,6 @@
 // Well-behaved command line aliases
 // Unlike batch script aliases, this program will not produce an annoying and useless "Terminate batch job (Y/N)" prompt.
+// Adapted from https://github.com/skeeto/w64devkit/blob/master/src/alias.c
 
 #include <windows.h>
 
