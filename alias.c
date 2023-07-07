@@ -2,7 +2,6 @@
 // Unlike batch script aliases, this program will not produce an annoying and useless "Terminate batch job (Y/N)" prompt.
 
 #include <windows.h>
-#include <stdio.h>
 
 #define EXE L"C:\\Users\\Joey\\AppData\\Local\\BusyBox\\busybox.exe"
 #define CMD L"ash -l"
