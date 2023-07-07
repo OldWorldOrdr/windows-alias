@@ -14,7 +14,7 @@ int mainCRTStartup(void) {
     PROCESS_INFORMATION pi;
 
     if (!CreateProcessW(EXE, CMD, 0, 0, 1, 0, 0, 0, &si, &pi)) {
-        return -4;
+        return 1;
     }
 
     unsigned long ret;
