@@ -2,10 +2,6 @@ PKGNAME := alias
 STRIP := llvm-strip
 CC := clang
 
-ifdef VERBOSE
-	SHELL += -x
-endif
-
 OPTFLAGS += -Os -fno-asynchronous-unwind-tables
 CFLAGS += -Wall -Wextra -Werror -Wno-unused-command-line-argument -std=c99
 LDFLAGS += -fuse-ld=lld -nostdlib -lkernel32
