@@ -4,8 +4,11 @@
         {
             "type": "process",
             "label": "make-debug",
-            "command": "make",
-            "args": [ "debug" ],
+            "command": "busybox",
+            "args": [
+                "make",
+                "debug"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
