@@ -13,9 +13,9 @@ all: $(PKGNAME).c
 	@$(STRIP) $(PKGNAME).exe
 
 debug:
-	@printf " \033[1;33mCC\033[0m %s\n" "$(PKGNAME).c"
+	@printf " \033[1;35mCC\033[0m %s\n" "$(PKGNAME).c"
 	@$(CC) $(CFLAGS) $(PKGNAME).c -c -g
-	@printf " \033[1;35mLD\033[0m %s\n" "$(PKGNAME).exe"
+	@printf " \033[1;34mLD\033[0m %s\n" "$(PKGNAME).exe"
 	@$(CC) $(LDFLAGS) $(PKGNAME).o -o $(PKGNAME).exe -g
 
 clean:
