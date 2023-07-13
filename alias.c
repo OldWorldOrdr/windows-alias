@@ -5,7 +5,7 @@
 #include <windows.h>
 
 #define EXE L"C:\\Users\\Joey\\AppData\\Local\\BusyBox\\busybox.exe"
-#define CMD L"ash -l"
+#define CMD L"ash"
 
 _Static_assert(sizeof(EXE) <= MAX_PATH, "EXE length exceeds MAX_PATH");
 
