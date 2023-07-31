@@ -6,7 +6,7 @@ ifndef VERBOSE
 Q = @
 endif
 
-CFLAGS := -Wall -Wextra -Werror -Wno-unused-command-line-argument -std=c99 -Os -fno-asynchronous-unwind-tables
+CFLAGS := -Wall -Wextra -Werror -std=c99 -Os -fno-asynchronous-unwind-tables
 LDFLAGS := -nostdlib -lkernel32
 
 all: $(PKGNAME).c
