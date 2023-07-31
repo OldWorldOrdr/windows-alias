@@ -1,13 +1,11 @@
 PKGNAME := alias
-STRIP := llvm-strip
-CC := clang
 
 ifndef VERBOSE
 Q = @
 endif
 
 CFLAGS := -Wall -Wextra -Werror -Wno-unused-command-line-argument -std=c99 -Os -fno-asynchronous-unwind-tables
-LDFLAGS := -nostdlib -lkernel32 -fuse-ld=lld
+LDFLAGS := -nostdlib -lkernel32
 
 all: $(PKGNAME).c
 	@printf " \033[1;32mCC\033[0m %s\n" "$(PKGNAME).c"
