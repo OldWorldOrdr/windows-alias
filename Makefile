@@ -1,4 +1,5 @@
 PKGNAME := alias
+CC := gcc
 
 ifndef VERBOSE
 Q = @
