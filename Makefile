@@ -11,14 +11,14 @@ LDFLAGS := -nostdlib -lkernel32
 
 all: $(PKGNAME).c
 	@printf " \033[1;32mCC\033[0m %s\n" "$(PKGNAME).c"
-	$(Q)$(CC) $(PKGNAME).c -c $(CFLAGS)
+	$(Q)$(CC) $(PKGNAME).c -c $(CFLAGS) -o $(PKGNAME).o
 	@printf " \033[1;34mLD\033[0m %s\n" "$(PKGNAME).exe"
 	$(Q)$(CC) $(PKGNAME).o -o $(PKGNAME).exe -s $(LDFLAGS)
 	$(Q)$(STRIP) $(PKGNAME).exe
 
 debug:
 	@printf " \033[1;35mCC\033[0m %s\n" "$(PKGNAME).c"
-	$(Q)$(CC) $(PKGNAME).c -c -g $(CFLAGS)
+	$(Q)$(CC) $(PKGNAME).c -c -g $(CFLAGS) -o $(PKGNAME).o
 	@printf " \033[1;34mLD\033[0m %s\n" "$(PKGNAME).exe"
 	$(Q)$(CC) $(PKGNAME).o -o $(PKGNAME).exe -g $(LDFLAGS)
 
