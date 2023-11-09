@@ -13,9 +13,8 @@ int mainCRTStartup(void) {
     STARTUPINFOW si;
     PROCESS_INFORMATION pi;
 
-    if (!CreateProcessW(EXE, CMD, 0, 0, 1, 0, 0, 0, &si, &pi)) {
+    if (!CreateProcessW(EXE, CMD, 0, 0, 1, 0, 0, 0, &si, &pi))
         return 1;
-    }
 
     unsigned long ret;
     WaitForSingleObject(pi.hProcess, -1);
